@@ -469,18 +469,20 @@ p {
   align-items: center;
 }
 
-.header-right svg {
-  margin-right: 7px;
-}
 
 .header-icons {
   color: var(--color-icon);
+  margin-right: 7px;
 }
 
 .header-btn {
   color: var(--white);
   height: 42px;
-
+  display: flex;
+  align-items: center;
+}
+.txt {
+  margin-right: 7px;
 }
 
 .header-btn:hover,
@@ -561,7 +563,7 @@ p {
   font-size: 21px;
   background: var(--white-grey);
   border: 3px solid var(--white);
-  padding: 7px 0;
+  padding: 7px 7px; 
   box-sizing: border-box;
   display: block;
   margin-bottom: 7px;
@@ -580,7 +582,7 @@ p {
 }
 
 .navigation {
-  padding: 20px 0 14px;
+  padding: 20px 15px 14px;
   background-color: var(--gray-color);
   color: var(--white);
   border-bottom: 5px solid var(--gray);
@@ -772,6 +774,15 @@ p {
 }
 
 /* ку ку  */
+@media (max-width: 944px) {
+  .header-users {
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .header-description {
+    margin: 0;
+  }
+}
 @media (max-width: 768px) {
   .txt {
     display: none;
