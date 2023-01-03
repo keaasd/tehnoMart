@@ -12,6 +12,11 @@ hf.beget.tech/public_html==https: //habr.com/ru/company/funcorp/blog/538982/
 ===========data-pid="51"
 webkit-text-size-adjust: none; */
 
+<header class="site-header">
+        <h1 class="visually-hidden">Магазин садового барахла «Lopatkin»</h1>
+
+        <nav class="site-nav">
+     
 
 :root {
     --text-size-mini: 3rem;
