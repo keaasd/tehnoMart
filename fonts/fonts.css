@@ -38,7 +38,7 @@
 	font-family: 'PT Sans';
 	src: local('../fonts'), local('../fonts/ptsansbold.woff2'),
 		/* url('../fonts/cuprumbold.woff') format('truetype'), */
-		url('../fonts/cuprumbold.woff') format('woff');
-	font-weight: bold;
+		url('../fonts/ptsansbold.woff') format('woff');
+	font-weight: 700;
 	font-style: normal;
 }
