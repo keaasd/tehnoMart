@@ -20,6 +20,7 @@
   <script defer src="js/btn-up.js"></script>
   <script defer src="js/scroll.js"></script>
   <script defer src="js/burger_menu.js"></script>
+  <script defer src="js/mode.js"></script>
   <title>Техномарт</title>
 </head>
 
@@ -342,21 +343,21 @@
             <li class="selection-item"><button class="selection-button">Гарантия</button></li>
             <li class="selection-item"><button class="selection-button">Кредит</button></li>
           </ul>
-          <div class="delivery-block ">
-            <h2 class="selection-title delivery-title">Доставка</h2>
+          <div class="delivery-block active-delivery-block">
+            <h2 class="selection-title delivery-title ">Доставка</h2>
             <p class="selection-text delivery-text">Мы с удовольствием доставим ваш товар прямо
               к вашему подъезду совершенно бесплатно!
               Ведь мы неплохо заработаем,
               поднимая его на ваш этаж!</p>
           </div>
 
-          <div class="delivery-block warranty-block ">
+          <div class="delivery-block warranty-block">
             <h2 class="selection-title delivery-title">Гарантия</h2>
             <p class="selection-text delivery-text ">Если купленный у нас товар поломается или заискрит, а также в
               случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы
               обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
           </div>
-          <div class="delivery-block credit-block active-delivery-block">
+          <div class="delivery-block credit-block ">
             <h2 class="title delivery-title">Кредит</h2>
             <p class="selection-text credit-text ">Залезть в долговую яму стало проще!
               <br> Кредитные консультанты придут вам на помощь.
@@ -487,27 +488,31 @@
               fill="#EE3643" />
           </svg>
         </button>
-        
-          <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
+
+        <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form-wrapper">
+          <div class="inputs">
             <p>
               <label for="name">Ваше имя:</label>
-              <input class="login-icon-user" id="name" type="email" name="login" placeholder="Имя Фамилия">
+              <input class="user-input user-name" id="name" type="email" name="login" placeholder="Имя Фамилия">
             </p>
             <p>
               <label for="email">Ваш e-mail:</label>
-              <input class="login-icon-user" id="email" type="email" name="email" placeholder="email@example.com">
+              <input class="user-input user-email" id="email" type="email" name="email" placeholder="email@example.com">
             </p>
-            <p>
-              <label for="login-textarea">Текст письма:</label>
-              <textarea class="login-icon-textarea" cols="30" rows="10" id="login-textarea" type="text" name="textarea"
-                value="В свободной форме"></textarea>
-            </p>
-            <div class="modal-button-box">
-              <button class="link modal-button" type="submit">Отправить</button>
-            </div>
-          </form>        
+          </div>
+          <p>
+            <label for="textarea">Текст письма:</label>
+            <textarea class="user-textarea" id="textarea" type="text" name="textarea"
+              value="В свободной форме"></textarea>
+          </p>
+        </div>
+          <div class="modal-button-box">
+            <button class="link modal-button" type="submit">Отправить</button>
+          </div>
+        </form>
       </div>
-    </div>    
+    </div>
   </section>
 
 
