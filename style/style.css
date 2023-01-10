@@ -692,6 +692,7 @@ p {
   justify-content: space-between;
   box-sizing: border-box;
   color: var(--white);
+  background-position: center;
 }
 
 .category-block {
@@ -867,9 +868,12 @@ p {
   position: absolute;
   top: 0;
   left: 100%;
-  border-width: 20px;
-  border-style: solid;
-  border-color: transparent transparent transparent var(--basic-red);
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 20px solid var(--basic-red);
+  border-bottom: 20px solid transparent;
+
 }
 
 .service {
@@ -999,7 +1003,25 @@ p {
 .about-block {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  gap: 15px;
 }
+
+.map-modal {
+  position: absolute;
+  top: 50%;
+  height: 449px;
+  width: calc(100vw - 30px);
+  background-image: url(../image/map-popup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.map-bg-s {}
 
 .contact {
   width: 100%;
@@ -1253,9 +1275,16 @@ p {
   width: 98%;
   min-height: 114px;
 }
+
 .hidden {
   display: none;
 }
+
+.visible {
+  opacity: 1;
+  display: block;
+}
+
 /* ку ку  */
 @media (max-width: 944px) {
   .header-users {
@@ -1283,12 +1312,20 @@ p {
   .category-item {
     padding: 15px 15px;
   }
+
+  .cards {
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .company {
+
+    max-width: 717px;
+  }
+
 }
 
-.visible {
-  opacity: 1;
-  display: block;
-}
 
 @media (max-width: 768px) {
   .txt {
@@ -1343,66 +1380,222 @@ p {
   .nav__link {
     font-size: 16px;
   }
+
+  .discount {
+    max-width: 75%;
+  }
+
+  .about-block {
+    gap: 30px;
+    flex-direction: column;
+    max-width: 537px;
+    margin: 0 auto;
+  }
+
+  .about {
+    max-width: 768px;
+  }
+
+  .company-text-p {
+    margin-bottom: 18px;
+  }
+
+  .contact-text {
+    margin-bottom: 15px;
+    max-width: initial;
+  }
+
+  .company-title {
+    margin-bottom: 10px;
+  }
+
+  .map {
+    max-width: initial;
+  }
+
+  .footer-box {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .feedback {
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.footer-wrap {
+  padding-bottom: 30px;
 }
 
-@media (max-width: 567px) {
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  @media (max-width: 567px) {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
-  .header-wrap-logo {
-    width: 101px;
-    margin-right: 0;
-  }
+    .header-wrap-logo {
+      width: 101px;
+      margin-right: 0;
+    }
 
-  .img-logo {
-    background-image: url(../image/logo-m.png);
-    width: 101px;
-  }
+    .img-logo {
+      background-image: url(../image/logo-m.png);
+      width: 101px;
+    }
 
-  /* .header-bar,
+    /* .header-bar,
   .header-btn {
     height: 22px;
   } */
 
-  .btn-order {
-    display: none;
+    .btn-order {
+      display: none;
+    }
+
+    .burger-btn__open {
+      display: flex;
+    }
+
+    .navigation {
+      display: none;
+    }
+
+    .header {
+      padding-bottom: 0;
+    }
+
+    .header-adress {
+      text-align: center;
+    }
+
+    .header-box {
+      gap: 15px;
+    }
+
+    .category-list {
+      grid-template-columns: 1fr;
+    }
+
+    .category-slider {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .card-title {
+      font-size: 16px;
+    }
+
+    .card-prise {
+      font-size: 15px;
+    }
+
+    .discount {
+      font-size: 15px;
+    }
+
+    .discount::after {
+      border-top-width: 18px;
+      border-left-width: 20px;
+      border-bottom-width: 19px;
+    }
+
+    .card-image {
+      margin-bottom: 10px;
+      height: 110px;
+    }
+
+    .categoryes {
+      padding: 20px 0 30px;
+    }
+
+    .cards {
+      margin-bottom: 30px;
+
+    }
+
+    .service {
+      padding: 30px 0 30px;
+    }
+
+    .about {
+      padding: 30px 0;
+    }
+
+    .card-items {
+      padding: 20px 10px 20px;
+    }
+
+    .title {
+      font-size: 23px;
+    }
+
+    .link-button {
+      font-size: 13px;
+      max-width: 154px;
+    }
+
+    .card-items-manufacturer {
+      height: 90px;
+    }
+
+    .selection {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .delivery-block {
+      margin-top: 0;
+    }
+
+    .selection-button {
+      padding: 12px 2%;
+      font-size: 20px;
+    }
+
+    .selection-list {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      flex-direction: column;
+    }
+
+    .address {
+      font-size: 16px;
+      order: 2;
+    }
+
+    .footer-logo {
+      width: 180px;
+      height: 41px;
+    }
+
+    .footer-top {
+      margin-bottom: 11px;
+      display: block;
+    }
+
+    .footer-nav-link {
+      font-size: 16px;
+    }
+
+    .footer-link-item {
+      font-size: 16px;
+    }
   }
 
-  .burger-btn__open {
-    display: flex;
-  }
 
-  .navigation {
-    display: none;
-  }
+  @media (max-width: 360px) {
+    :root {
+      --text-size-mini: 1rem;
+    }
 
-  .header {
-    padding-bottom: 0;
-  }
+    .title {
+      font-size: 20px;
+    }
 
-  .header-adress {
-    text-align: center;
+    .link-button {
+      font-size: 12px;
+      max-width: 133px;
+    }
   }
-
-  .header-box {
-    gap: 15px;
-  }
-
-  .category-list {
-    grid-template-columns: 1fr;
-  }
-
-  .category-slider {
-    grid-column: 1;
-    grid-row: 1;
-  }
-}
-
-
-@media (max-width: 360px) {
-  :root {
-    --text-size-mini: 1rem;
-  }
-}
